@@ -132,8 +132,6 @@ on:
       - "src/process/**"
       - "src/secrets/**"
       - "src/security/**"
-  schedule:
-    - cron: "30 6 * * *"
 
 concurrency:
   group: codeql-critical-quality-${{ github.workflow }}-${{ github.event_name == 'workflow_dispatch' && github.run_id || github.event_name == 'pull_request' && github.event.pull_request.number || github.sha }}
